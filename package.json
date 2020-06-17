@@ -1,17 +1,19 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
-  "engines": {
-    "node": ">=6.13.0"
-  },
+  "name": "listingservice",
+  "version": "1.0.0",
+  "description": "CampAang site listing",
+  "main": "index.js",
   "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "dependencies": {
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrr46-fec-aang/listingservice.git"
   },
-  "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+  "author": "Danica Fisher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrr46-fec-aang/listingservice/issues"
+  },
+  "homepage": "https://github.com/hrr46-fec-aang/listingservice#readme"
 }
