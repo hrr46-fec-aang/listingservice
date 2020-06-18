@@ -2,10 +2,11 @@ const db = require('./index.js');
 const Site = require('./Site.js');
 
 const exData = [ {
+  id: 0,
   host: {
     name: 'Jane',
     image: undefined,
-    status: 'top'
+    status: true
   },
   site: {
     state: 'New York',
