@@ -13,7 +13,8 @@ app.get('/:id', function(req, res) {
   var query = Sites.where({id: listingID});
   query.findOne(function(err, site) {
     if (err) {
-      return err;
+      res.send('Not found');
+      //return err;
     }
     if (site) {
       res.send(site);

@@ -16,7 +16,7 @@ class App extends React.Component {
       method: 'GET',
       dataType: 'json',
       success: function(res) {
-        console.log(res.body);
+        console.log('Success getting data');
       }
     }
     );
