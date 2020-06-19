@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const mongoUri = 'mongodb://localhost/listing';
 
-const db = mongoose.connect(mongoUri, { useNewUrlParser: true });
+mongoose.connect(mongoUri, { useNewUrlParser: true });
+const db = mongoose.connection;
 
 module.exports = db;

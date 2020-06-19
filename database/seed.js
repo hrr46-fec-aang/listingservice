@@ -88,7 +88,7 @@ const addExData = function() {
     var dataEntry = exData;
     dataEntry.id = i;
     Site.create(dataEntry)
-      .then(() => db.disconnect())
+      .then(() => db.close())
       .catch(err => console.log(err));
   }
 };
