@@ -3,7 +3,7 @@ const Site = require('./Site.js');
 const faker = require('faker');
 
 
-const exData = [ {
+const exData = {
   id: 0,
   host: {
     name: faker.name.firstName(),
@@ -79,7 +79,7 @@ const exData = [ {
     temp: faker.random.number({min: 30, max: 100}), // temperature at campsite
     dist: faker.random.number(100) // distance to campsite
   }
-}];
+};
 
 // create the data in the dB
 // best practice is to disconnect after connecting ("Site" uses .model method, which connects to db)
