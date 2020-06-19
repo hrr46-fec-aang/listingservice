@@ -3,10 +3,11 @@ const db = require('./index.js');
 mongoose.Promise = global.Promise;
 
 const siteSchema = new mongoose.Schema({
+  id: Number,
   host: {
     name: String,
     image: String,
-    status: String
+    status: Boolean
   },
   site: {
     state: String,
