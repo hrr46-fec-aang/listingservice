@@ -25,7 +25,30 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        Hello, world!
+        <section>
+          <div>
+            <Desc/>
+          </div>
+
+          <div>
+            <InfoCards/>
+          </div>
+
+          <div>
+            <ContactHost/>
+          </div>
+        </section>
+        <section>
+          <Details/>
+        </section>
+        <div>
+          <Features/>
+        </div>
+        <section>
+          <Vibe/>
+        </section>
+
+
       </div>
     );
   }
