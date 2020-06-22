@@ -2,43 +2,95 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
+import Desc from './components/Desc.jsx';
 
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      site: '',
+      mounted: true
     };
   }
 
-  getOverview() {
-    $.ajax('/:id', {
+  componentDidMount() {
+    //this.getOverview();
+    //console.log('compMount:', this.state.site);
+    var state = this;
+    var id = window.location.pathname;
+    // state.setState({mounted: true});
+    console.log(state.state);
 
-      method: 'GET',
-      dataType: 'json',
-      success: function(res) {
-        console.log('Success getting data');
+    $.get('/site' + id, function(result) {
+      if (state.state.mounted) {
+        state.setState({
+          site: result
+        });
+        console.log(state.state);
       }
-    }
-    );
+    });
+
+
+    // $.ajax('/site' + id, {
+    //   method: 'GET',
+    //   dataType: 'json',
+    //   success: function(result) {
+    //     if (!state.state.mounted) {
+    //       state.setState({site: result});
+    //     }
+    //     console.log('state:', state.state);
+    //   }.bind(this),
+      // success: function(result) {
+      //   if (!state.state.mounted) {
+
+      //     state.setState({site: result});
+      //     console.log('compMount state:', state.state.site);
+      //   }
+      // }.bind(this),
+    //   error: function(err) {
+    //     console.log(err);
+    //   }
+    // });
   }
 
+  // getOverview() {
+  //   var state = this;
+  //   console.log('client entered');
+  //   var id = window.location.pathname;
+  //   console.log(id);
+  //   $.ajax('http://localhost:3002/site/:id', {
+  //     method: 'GET',
+  //     dataType: 'json',
+  //     success: function(res) {
+  //       state.setState({site: res});
+
+  //     },
+  //     error: function(err) {
+  //       console.log(err);
+  //     }
+  //   }
+  //   );
+
+
   render() {
+    var state = this;
     return (
       <div>
+        <h1>Site Listing</h1>
         <section>
           <div>
-            <Desc/>
+            <Desc info={state.state.site}/>
           </div>
 
-          <div>
+          {/* <div>
             <InfoCards/>
           </div>
 
           <div>
             <ContactHost/>
-          </div>
+          </div> */}
         </section>
-        <section>
+        {/* <section>
           <Details/>
         </section>
         <div>
@@ -46,9 +98,7 @@ class App extends React.Component {
         </div>
         <section>
           <Vibe/>
-        </section>
-
-
+        </section> */}
       </div>
     );
   }

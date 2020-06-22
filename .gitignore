@@ -1,10 +1,7 @@
 ## MAC files ##
 .DS_Store
 
-## NPM ##
-npm
-npm-debug.log
 node_modules
 
 # Compiled Dirs
-client/dist/bundle.js
+bundle.js
