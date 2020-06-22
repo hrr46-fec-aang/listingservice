@@ -1,11 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-const Desc = (props) => (
-  <div>
-    <h2>{console.log(props.info.host)}</h2>
-
-  </div>
-);
+const Desc = function(props) {
+  return (
+    <div>
+      <h2>{props.info.site.host.name}</h2>
+    </div>
+  );
+};
 
 export default Desc;
