@@ -33,7 +33,7 @@ class App extends React.Component {
           <h1>Site Listing</h1>
           <section>
             <div>
-              <Desc info={state.state}/>
+              <Desc info={state.state.site}/>
             </div>
 
             {/* <div>
