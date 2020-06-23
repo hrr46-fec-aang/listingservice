@@ -4,6 +4,12 @@ import $ from 'jquery';
 import styled from 'styled-components';
 
 import Desc from './components/Desc.jsx';
+import Host from './components/Host.jsx';
+
+
+const Container = styled.section`
+
+`;
 
 class App extends React.Component {
   constructor() {
@@ -26,8 +32,6 @@ class App extends React.Component {
         }
         );
     }
-
-
   }
 
   render() {
@@ -36,9 +40,10 @@ class App extends React.Component {
       return (
         <div>
           <section>
-            <div>
+            <Container>
+              <Host info={state.state.site}/>
               <Desc info={state.state.site}/>
-            </div>
+            </Container>
 
             {/* <div>
               <InfoCards/>
