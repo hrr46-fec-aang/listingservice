@@ -1,6 +1,6 @@
 version: 2.1
 jobs:
-  build:
+  build-and-test:
     docker:
         - image: circleci/node
         - image: circleci/mongo:3.5.9
