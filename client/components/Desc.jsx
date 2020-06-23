@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import {faStar} from '@fortawesome/free-regular-svg-icons';
+
+
+// const HostStar = styled(faStar)`
+//   color: blue;
+// `;
 
 const Container = styled.section`
 
@@ -19,6 +26,9 @@ const HostStatus = styled.i`
   position: absolute;
   top: 80%;
   left: 20%;
+  color: gold;
+  border-radius: 100px;
+
 `;
 
 const HostBy = styled.h4`
@@ -49,18 +59,16 @@ const DesWrapper = styled.section`
   background: pink;
 `;
 
-// color: ${props => props.info.host.status ? 'orange' : 'palevioletred'};
-
-
-
 const Desc = function(props) {
   return (
     <Container>
       <HostWrapper>
         <Avatar src={props.info.host.image}></Avatar>
-        <span>
-          {/* <HostStatus class="fas fa-star"></HostStatus> */}
-        </span>
+        {/* <span>
+          <HostStatus>
+            <FontAwesomeIcon icon={faStar}/>
+          </HostStatus>
+        </span> */}
         <Host>
           <HostBy>Hosted by</HostBy>
           <HostName>{props.info.host.name}</HostName>
