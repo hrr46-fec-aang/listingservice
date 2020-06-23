@@ -6,7 +6,8 @@ const Container = styled.section`
 
 `;
 
-const Host = styled.section`
+const Host = styled.div`
+float: right;
 `;
 
 const Avatar = styled.img`
@@ -21,10 +22,14 @@ const HostStatus = styled.i`
 `;
 
 const HostBy = styled.h4`
-  font-size: 1.5em;
+  font-size: 1em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 `;
 const HostName = styled.p`
-  font-size: 1.5em;
+  font-size: 1em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
 `;
 
 const HostWrapper = styled.section`
