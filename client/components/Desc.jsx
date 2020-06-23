@@ -20,27 +20,27 @@ class Desc extends React.Component {
     super(props);
     this.state = {
       read: false,
-      overview: props.info.site.desc
+      overview: this.props.info.site.desc
     };
   }
 
   clickHandler(e) {
     this.setState({read: true});
-    this.setState({overview: props.info.site.desc});
+    this.setState({overview: this.props.info.site.desc});
   }
 
   render() {
     if (this.state.read) {
       return (
-        <DesWrapper>{this.state.overview.split('\n').map((para) => (
-          <p>{para}</p>
+        <DesWrapper key={this.props.info.site._id}>{this.state.overview.split('\n').map((para) => (
+          <p key={this.props.info.site.desc.indexOf(para)}>{para}</p>
         ))}
         </DesWrapper>
 
       );
     } else {
       return (
-        <DesWrapper>
+        <DesWrapper key={this.props.info.site._id}>
           {this.state.overview.slice(0, 300)}
           <ReadMore onClick={(e) => this.clickHandler(e)}> Read more...</ReadMore>
         </DesWrapper>
