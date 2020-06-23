@@ -5,7 +5,7 @@ jobs:
   build-and-test:
     docker:
         - image: circleci/node
-        - image: circleci/mongo:3.5.9
+        - image: circleci/mongo:4.2.1
     executor:
       name: node/default
       tag: '12.16.1'
