@@ -1,36 +1,79 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import styled from 'styled-components';
+
+const Container = styled.section`
+
+`;
+
+const Host = styled.section`
+`;
+
+const Avatar = styled.img`
+  border-radius: 100px;
+  float: left;
+`;
+
+const HostStatus = styled.i`
+  position: absolute;
+  top: 80%;
+  left: 20%;
+`;
+
+const HostBy = styled.h4`
+  font-size: 1.5em;
+`;
+const HostName = styled.p`
+  font-size: 1.5em;
+`;
+
+const HostWrapper = styled.section`
+  width: 15%;
+  height: 400px;
+  float: left;
+  padding: 4em;
+  margin-left: 10px;
+  background: papayawhip;
+`;
+
+const DesWrapper = styled.section`
+  margin-left: 15%;
+  height: 400px;
+  padding: 4em;
+  margin-right: 10px;
+  background: pink;
+`;
+
+// color: ${props => props.info.host.status ? 'orange' : 'palevioletred'};
+
+
 
 const Desc = function(props) {
   return (
-    <div class='col'>
-      <div class='listed-by'>
-        <img src={props.info.host.image}></img>
+    <Container>
+      <HostWrapper>
+        <Avatar src={props.info.host.image}></Avatar>
         <span>
-          <i></i>
+          {/* <HostStatus class="fas fa-star"></HostStatus> */}
         </span>
-        <div class='host-info'>
-          <span>Hosted by</span>
-          <div>
-            <a>{props.info.host.name}</a>
-          </div>
-        </div>
-      </div>
-      {/* some info for the fafa star
-      {(props.info.host.status) =>
-          <i class="fas fa-star"></i>
-      }
+        <Host>
+          <HostBy>Hosted by</HostBy>
+          <HostName>{props.info.host.name}</HostName>
+        </Host>
+
+      </HostWrapper>
 
 
-      <div>{props.info.site.desc.split('\n').map((para) => (
+
+      <DesWrapper>{props.info.site.desc.split('\n').map((para) => (
         <p>{para}</p>
-        ))}
+      ))}
 
-      </div> */}
+      </DesWrapper>
 
 
 
-    </div>
+    </Container>
   );
 };
 
