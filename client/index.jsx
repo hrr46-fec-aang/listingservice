@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 
 import Desc from './components/Desc.jsx';
+import InfoCards from './components/InfoCards.jsx';
+import ContactHost from './components/ContactHost.jsx';
 
 class App extends React.Component {
   constructor() {
@@ -36,13 +38,13 @@ class App extends React.Component {
               <Desc info={state.state}/>
             </div>
 
-            {/* <div>
-              <InfoCards/>
+            <div>
+              <InfoCards info={state.state}/>
             </div>
 
             <div>
-              <ContactHost/>
-            </div> */}
+              <ContactHost info={state.state}/>
+            </div>
           </section>
           {/* <section>
             <Details/>
