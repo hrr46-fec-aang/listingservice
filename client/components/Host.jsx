@@ -44,9 +44,7 @@ const HostName = styled.p`
 const HostWrapper = styled.section`
   position: relative;
   width: 15%;
-  height: 400px;
   float: left;
-  padding: 0.5em;
   margin-left: 10%;
   background: papayawhip;
 `;

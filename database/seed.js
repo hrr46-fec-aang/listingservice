@@ -17,7 +17,7 @@ const addExData = function() {
         state: faker.address.state(),
         prop: faker.lorem.words(),
         site: faker.lorem.word(),
-        desc: faker.lorem.paragraphs()
+        desc: faker.lorem.paragraphs(3)
       },
       info: {
         area: {
