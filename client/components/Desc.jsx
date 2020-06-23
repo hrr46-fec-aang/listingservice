@@ -9,26 +9,29 @@ import styled from 'styled-components';
 //   color: blue;
 // `;
 
+// const HostStatus = styled.i`
+//   top: 80%;
+//   left: 20%;
+//   color: gold;
+//   border-radius: 100px;
+
+// `;
+
 const Container = styled.section`
 
 `;
 
-const Host = styled.div`
-float: right;
-`;
-
 const Avatar = styled.img`
   border-radius: 100px;
+  position: relative;
+  width: 50%;
   float: left;
 `;
 
-const HostStatus = styled.i`
-  position: absolute;
-  top: 80%;
-  left: 20%;
-  color: gold;
-  border-radius: 100px;
-
+const Host = styled.div`
+  margin-left: 60%;
+  margin-top: 15%;
+  margin-bottom: 25%;
 `;
 
 const HostBy = styled.h4`
@@ -43,11 +46,12 @@ const HostName = styled.p`
 `;
 
 const HostWrapper = styled.section`
+  position: relative;
   width: 15%;
   height: 400px;
   float: left;
   padding: 4em;
-  margin-left: 10px;
+  margin-left: 10%;
   background: papayawhip;
 `;
 
@@ -55,11 +59,13 @@ const DesWrapper = styled.section`
   margin-left: 15%;
   height: 400px;
   padding: 4em;
-  margin-right: 10px;
+  margin-right: 25%;
   background: pink;
+  font-size: 1.5em;
 `;
 
-const Desc = function(props) {
+const Desc = (props) => {
+
   return (
     <Container>
       <HostWrapper>
@@ -81,13 +87,14 @@ const Desc = function(props) {
       <DesWrapper>{props.info.site.desc.split('\n').map((para) => (
         <p>{para}</p>
       ))}
-
       </DesWrapper>
 
 
 
     </Container>
   );
+
+
 };
 
 export default Desc;
