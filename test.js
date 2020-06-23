@@ -16,9 +16,9 @@ beforeAll(async () => {
   await page.setViewport({width, height});
 });
 
-afterAll(() => {
-  browser.close();
-});
+// afterAll(() => {
+//   browser.close();
+// });
 
 describe('test passing GET request', () => {
 
