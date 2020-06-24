@@ -4,10 +4,8 @@ import $ from 'jquery';
 import styled from 'styled-components';
 
 import Desc from './components/Desc.jsx';
-<<<<<<< HEAD
 import InfoCards from './components/InfoCards.jsx';
 import ContactHost from './components/ContactHost.jsx';
-=======
 import Host from './components/Host.jsx';
 
 
@@ -15,7 +13,6 @@ const Container = styled.section`
 
 
 `;
->>>>>>> b48330a266567f058923a7b80fcc2dd0a2c4c04d
 
 class App extends React.Component {
   constructor() {
