@@ -7,11 +7,16 @@
     "start": "nodemon server/start.js",
     "build": "webpack -d --watch",
     "buildCI": "webpack -d",
-    "test": "jest",
+    "testBE": "jest ./test/BE.test.js",
+    "testFE": "jest ./test/FE.test.js",
     "db:seed": "node database/seed.js"
   },
   "jest": {
-    "testEnvironment": "node"
+    "testEnvironment": "jsdom",
+    "transform": {
+      "^.+\\.js?$": "babel-jest",
+      "^.+\\.jsx$": "babel-jest"
+    }
   },
   "repository": {
     "type": "git",
@@ -47,7 +52,11 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-react": "^7.10.1",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-loader": "^8.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.5.0",
     "nodemon": "^2.0.4",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
