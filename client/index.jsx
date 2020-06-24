@@ -1,8 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import styled from 'styled-components';
 
 import Desc from './components/Desc.jsx';
+import Host from './components/Host.jsx';
+
+
+const Container = styled.section`
+
+
+`;
 
 class App extends React.Component {
   constructor() {
@@ -17,12 +25,14 @@ class App extends React.Component {
     var state = this;
     var id = window.location.pathname;
 
-    $.get('/site' + id)
-      .then(function(res) {
-        state.setState({site: res});
-        state.setState({mounted: true});
-      }
-      );
+    if (state.state.site.id !== id) {
+      $.get('/site' + id)
+        .then(function(res) {
+          state.setState({site: res});
+          state.setState({mounted: true});
+        }
+        );
+    }
   }
 
   render() {
@@ -30,11 +40,11 @@ class App extends React.Component {
     if (state.state.mounted) {
       return (
         <div>
-          <h1>Site Listing</h1>
           <section>
-            <div>
-              <Desc info={state.state}/>
-            </div>
+            <Container>
+              <Host info={state.state.site}/>
+              <Desc info={state.state.site}/>
+            </Container>
 
             {/* <div>
               <InfoCards/>
