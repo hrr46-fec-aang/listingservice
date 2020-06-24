@@ -3,7 +3,6 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const app = express();
-const port = 3002;
 
 const Sites = require('../database/Site.js');
 
@@ -29,4 +28,4 @@ app.get('/site/:id', function(req, res) {
 
 });
 
-
+module.exports = app;
