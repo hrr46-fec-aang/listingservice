@@ -15,16 +15,8 @@ describe('tests server', () => {
     });
   });
 
-  beforeEach(async () => {
-
-  });
-
-  afterEach(async () => {
-    //await Camp.deleteMany();
-  });
-
   afterAll(async () => {
-
+    await db.close();
   });
 
   it('should find the campsite by url id', async (done) => {
@@ -32,6 +24,16 @@ describe('tests server', () => {
     expect(res.body.id).toBe(82);
     done();
   });
+
+  it('should not find a campsite for nonexistent id', async (done) => {
+    const res = await request.get('/site/182');
+    expect(res.text).toEqual('Not found');
+    done();
+  });
+
+});
+
+describe('tests front end', () => {
 
 });
 
