@@ -14,9 +14,10 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-      - run: npm run buildCI
-      - run: npm run db:seed
-      - run: npm test
+            - run: npm start
+            - run: npm run buildCI
+            - run: npm run db:seed
+            - run: npm test
 workflows:
   build-and-test:
     jobs:
