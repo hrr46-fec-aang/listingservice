@@ -59,7 +59,7 @@ describe('test passing GET request', () => {
   // });
 
   test('Checks that GET returns correct site based on id', async () => {
-    const res = await page.goto('http://localhost:3002/82');
+    const res = await page.goto('http://localhost:3002/site/82');
     const resBody = await res.text();
     const resBodyObj = JSON.parse(resBody);
     expect(resBodyObj.id).toEqual(82);
