@@ -12,6 +12,7 @@ app.use('/:id', express.static(path.join(__dirname, '/../client/dist')));
 
 app.get('/site/:id', function(req, res) {
   console.log('site id: ', req.params);
+
   var siteID = req.params.id;
   var query = Sites.where({id: siteID});
   query.findOne(function(err, site) {
@@ -19,6 +20,7 @@ app.get('/site/:id', function(req, res) {
       return err;
     }
     if (site) {
+      console.log('site host:', site.host.name);
       res.send(site);
     } else {
       res.send('Not found');
