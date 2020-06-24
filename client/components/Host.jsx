@@ -42,11 +42,15 @@ const HostName = styled.p`
 `;
 
 const HostWrapper = styled.section`
-  position: relative;
-  width: 15%;
-  float: left;
-  margin-left: 10%;
   background: papayawhip;
+  position: relative;
+  float: left;
+  width: 33.33333333%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+
 `;
 
 const Host = function(props) {

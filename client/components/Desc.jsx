@@ -4,11 +4,10 @@ import styled from 'styled-components';
 
 const DesWrapper = styled.section`
   margin-left: 25%;
-  width: 60%;
+  width: 66.66666667%;
   margin-right: 25%;
   background: pink;
   font-size: 1.5em;
-  width: 60%;
 `;
 
 const ReadMore = styled.a`

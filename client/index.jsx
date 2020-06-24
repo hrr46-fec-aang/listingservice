@@ -10,8 +10,21 @@ import Host from './components/Host.jsx';
 
 
 const Container = styled.section`
+  margin-left: -10px;
+  margin-right: -10px;
+  width: 66.66666667%;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
 
-
+`;
+const Body = styled.div`
+  font-family: "Calibre", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.42;
+  color: #333333;
+  background-color: white;
 `;
 
 class App extends React.Component {
@@ -41,7 +54,7 @@ class App extends React.Component {
     var state = this;
     if (state.state.mounted) {
       return (
-        <div>
+        <Body>
           <section>
             <Container>
               <Host info={state.state.site}/>
@@ -65,7 +78,7 @@ class App extends React.Component {
           <section>
             <Vibe/>
           </section> */}
-        </div>
+        </Body>
       );
     } else {
       return null;
