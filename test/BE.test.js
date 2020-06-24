@@ -1,10 +1,11 @@
-const app = require('./server/index.js');
+const app = require('../server/index.js');
 const supertest = require('supertest');
 const request = supertest(app);
 const mongoose = require('mongoose');
 mongoose.promise = global.Promise;
-const Sites = require('./database/Site.js');
+const Sites = require('../database/Site.js');
 
+// ******* Tests ******* //
 describe('tests server', () => {
   beforeAll(async () => {
     const url = `mongodb://127.0.0.1/test`;
@@ -30,10 +31,6 @@ describe('tests server', () => {
     expect(res.text).toEqual('Not found');
     done();
   });
-
-});
-
-describe('tests front end', () => {
 
 });
 
