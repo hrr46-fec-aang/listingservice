@@ -68,6 +68,7 @@ const MoreInfoText = styled.a`
 `;
 
 const EssCard = function(props) {
+
   return (
     <CardDiv>
       <CardTitle>{props.name}</CardTitle>
@@ -105,7 +106,6 @@ const EssCard = function(props) {
         <MoreInfoText>More details</MoreInfoText>
       </MoreInfo>
     </CardDiv>
-
   );
 };
 

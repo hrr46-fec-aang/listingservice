@@ -4,25 +4,54 @@ import styled from 'styled-components';
 import CampCard from './CampCard.jsx';
 import EssCard from './EssCard.jsx';
 import AmntCard from './AmntCard.jsx';
+import Modal from './Modal.jsx';
 
 const CardWrapper = styled.section`
   display: flex;
   flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
-
 `;
 
+class InfoCards extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      disp: false,
+      name: undefined
+    };
+  }
 
-const InfoCards = function(props) {
-  var curr = props.info;
-  return (
-    <CardWrapper>
-      <CampCard name='Campsite area' cardInfo={curr.info.area} />
-      <EssCard name='Essentials' cardInfo={curr.info.ess} />
-      <AmntCard name='Amenities' cardInfo={curr.info.amnt} />
-    </CardWrapper>
-  );
-};
+  changeView(e, name) {
+    this.setState({
+      disp: true,
+      name: name
+    });
+  }
+
+  hideModal() {
+    this.setState({
+      disp: false,
+      name: undefined
+    });
+  }
+
+  render() {
+    var show = this.state.disp;
+    var curr = this.props.info;
+    console.log(curr);
+    if (show) {
+      return ( <Modal disp={show} handleClose={() => this.hideModal()}></Modal>);
+    } else {
+      return (
+        <CardWrapper>
+          <CampCard name='Campsite area' cardInfo={curr.info.area} handleClick={(e, name) => this.changeView(e, name)}/>
+          <EssCard name='Essentials' cardInfo={curr.info.ess} />
+          <AmntCard name='Amenities' cardInfo={curr.info.amnt} />
+        </CardWrapper>
+      );
+    }
+  }
+}
 
 export default InfoCards;
