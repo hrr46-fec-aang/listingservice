@@ -28,6 +28,7 @@ const Container = styled.section`
   margin: 0;
   padding-top: 20px;
   border-top: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
 `;
 
 
@@ -43,11 +44,6 @@ const Overview = styled.div`
 const Cards = styled.div`
   box-sizing: border-box;
   display: block;
-`;
-
-const Contact = styled.div`
-  margin-top: 10px;
-  font-size: 1.8rem;
 `;
 
 class App extends React.Component {
@@ -86,19 +82,8 @@ class App extends React.Component {
             <Cards>
               <InfoCards info={state.state.site}/>
             </Cards>
-            <Contact>
-              <ContactHost info={state.state.site}/>
-            </Contact>
+            <ContactHost info={state.state.site}/>
           </Container>
-          {/* <section>
-            <Details/>
-          </section>
-          <div>
-            <Features/>
-          </div>
-          <section>
-            <Vibe/>
-          </section> */}
         </ListingDiv>
       );
     } else {
