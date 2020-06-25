@@ -8,23 +8,44 @@ import InfoCards from './components/InfoCards.jsx';
 import ContactHost from './components/ContactHost.jsx';
 import Host from './components/Host.jsx';
 
-
-const Container = styled.section`
-  margin-left: -10px;
-  margin-right: -10px;
-  width: 66.66666667%;
+const ListingDiv = styled.div`
+  float: left;
   position: relative;
   min-height: 1px;
   padding-left: 10px;
   padding-right: 10px;
-
-`;
-const Body = styled.div`
+  display: block;
+  box-sizing: border-box;
+  font-weight: 400;
   font-family: "Calibre", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.42;
   color: #333333;
   background-color: white;
+`;
+
+const Container = styled.section`
+  margin: 0;
+  padding-top: 20px;
+  border-top: 1px solid #ebebeb;
+`;
+
+
+const Overview = styled.div`
+  margin-left: -10px;
+  margin-right: -10px;
+  display: grid;
+  grid-template-columns: 33% 67%;
+  padding: 10px;
+  grid-row: 2 / 1;
+`;
+
+const Cards = styled.div`
+
+`;
+const Contact = styled.div`
+  margin-top: 10px;
+  font-size: 1.8rem;
 `;
 
 class App extends React.Component {
@@ -54,21 +75,19 @@ class App extends React.Component {
     var state = this;
     if (state.state.mounted) {
       return (
-        <Body>
-          <section>
-            <Container>
+        <ListingDiv>
+          <Container>
+            <Overview>
               <Host info={state.state.site}/>
               <Desc info={state.state.site}/>
-            </Container>
-
-            <div>
+            </Overview>
+            <Cards>
               <InfoCards info={state.state}/>
-            </div>
-
-            <div>
+            </Cards>
+            <Contact>
               <ContactHost info={state.state}/>
-            </div>
-          </section>
+            </Contact>
+          </Container>
           {/* <section>
             <Details/>
           </section>
@@ -78,7 +97,7 @@ class App extends React.Component {
           <section>
             <Vibe/>
           </section> */}
-        </Body>
+        </ListingDiv>
       );
     } else {
       return null;
