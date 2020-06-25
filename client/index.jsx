@@ -41,8 +41,10 @@ const Overview = styled.div`
 `;
 
 const Cards = styled.div`
-
+  box-sizing: border-box;
+  display: block;
 `;
+
 const Contact = styled.div`
   margin-top: 10px;
   font-size: 1.8rem;
@@ -82,10 +84,10 @@ class App extends React.Component {
               <Desc info={state.state.site}/>
             </Overview>
             <Cards>
-              <InfoCards info={state.state}/>
+              <InfoCards info={state.state.site}/>
             </Cards>
             <Contact>
-              <ContactHost info={state.state}/>
+              <ContactHost info={state.state.site}/>
             </Contact>
           </Container>
           {/* <section>

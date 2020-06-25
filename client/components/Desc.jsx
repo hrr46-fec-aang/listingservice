@@ -7,20 +7,12 @@ const DesWrapper = styled.div`
   font-size: 1.8rem;
   box-sizing: border-box;
   display: block;
-
-
-  background: pink;
 `;
 
 const Info = styled.div`
   box-sizing: border-box;
   display: block;
-
-
-
   line-height: 1.42;
-  color: #333333;
-  background-color: white;
 `;
 
 const ReadMore = styled.a`

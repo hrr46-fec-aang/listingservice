@@ -23,8 +23,6 @@ const HostWrapper = styled.div`
   min-height: 1px;
   padding-left: 10px;
   padding-right: 10px;
-
-  background: papayawhip;
 `;
 
 const ListedBy = styled.div`
@@ -33,6 +31,7 @@ const ListedBy = styled.div`
   line-height: 1.2;
   padding-right: 15px;
   position: relative;
+  width: 66.66666667%;
 `;
 
 const Avatar = styled.img`
@@ -50,10 +49,11 @@ const Avatar = styled.img`
 `;
 
 const HostInfo = styled.div`
-  display: block;
+  display: flex;
   flex-direction: column;
+  box-sizing: border-box;
+  font-weight: 400;
   line-height: 1.2;
-  width: 66.66666667%;
 `;
 
 const HostBy = styled.span`
@@ -66,7 +66,6 @@ const HostName = styled.div`
   line-height: 1.2;
   font-weight: 400;
   font-size: 1.8rem;
-  border-bottom: 1px solid #ebebeb;
   color: inherit;
   background-color: transparent;
 `;
