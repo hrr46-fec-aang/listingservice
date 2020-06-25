@@ -18,7 +18,7 @@ const CardDiv = styled.div`
 `;
 
 const CardTitle = styled.div`
-  font-size: 2.4rem;
+  font-size: 2rem;
   font-weight: 500;
   margin-bottom: 10px;
   margin-left: 4px;
@@ -48,6 +48,23 @@ const IconInfo = styled.span`
 const CardText = styled.div`
   font-size: 1.6rem;
   line-height: 2rem;
+`;
+
+const MoreInfo = styled.div`
+  position: absolute;
+  bottom: 15px;
+  left: 18px;
+  color: #40d9ac;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.4;
+`;
+
+const MoreInfoText = styled.a`
+  cursor: pointer;
+  color: #40d9ac;
+  font-weight: 500;
+  font-size: 1.8rem;
 `;
 
 const AmntCard = function(props) {
@@ -114,6 +131,9 @@ const AmntCard = function(props) {
         </VertIcon>
         <CardText>{props.cardInfo.trash}</CardText>
       </Info>
+      <MoreInfo>
+        <MoreInfoText>More details</MoreInfoText>
+      </MoreInfo>
     </CardDiv>
   );
 };

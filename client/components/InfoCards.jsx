@@ -10,38 +10,9 @@ const CardWrapper = styled.section`
   flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
+
 `;
 
-// const Card = styled.section`
-//   margin: 0 10px 20px 10px;
-//   position: relative;
-//   background-color: #fff;
-//   border: 1px solid #ebebeb;
-//   padding: 15px 5px 15px 15px;
-//   flex-wrap: wrap;
-//   line-height: 1.4;
-//   width: 220px;
-//   height: 340px;
-//   box-shadow: 0 1px 2px rgba(0,0,0,0.08) !important;
-// `;
-
-const CardTitle = styled.div`
-`;
-
-const Info = styled.div`
-`;
-
-const VertIcon = styled.div`
-`;
-
-const Icon = styled.div`
-`;
-
-const IconInfo = styled.span`
-`;
-
-const CardText = styled.div`
-`;
 
 const InfoCards = function(props) {
   var curr = props.info;

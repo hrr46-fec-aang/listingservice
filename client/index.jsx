@@ -44,6 +44,7 @@ const Overview = styled.div`
 const Cards = styled.div`
   box-sizing: border-box;
   display: block;
+  location: center;
 `;
 
 class App extends React.Component {
