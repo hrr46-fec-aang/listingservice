@@ -46,8 +46,8 @@ class InfoCards extends React.Component {
       return (
         <CardWrapper>
           <CampCard name='Campsite area' cardInfo={curr.info.area} handleClick={(e, name) => this.changeView(e, name)}/>
-          <EssCard name='Essentials' cardInfo={curr.info.ess} />
-          <AmntCard name='Amenities' cardInfo={curr.info.amnt} />
+          <EssCard name='Essentials' cardInfo={curr.info.ess} handleClick={(e, name) => this.changeView(e, name)}/>
+          <AmntCard name='Amenities' cardInfo={curr.info.amnt} handleClick={(e, name) => this.changeView(e, name)}/>
         </CardWrapper>
       );
     }

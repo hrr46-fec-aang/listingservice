@@ -22,7 +22,6 @@ const CardTitle = styled.div`
   font-weight: 500;
   margin-bottom: 10px;
   margin-left: 4px;
-
 `;
 
 const Info = styled.div`
@@ -132,7 +131,7 @@ const AmntCard = function(props) {
         <CardText>{props.cardInfo.trash}</CardText>
       </Info>
       <MoreInfo>
-        <MoreInfoText>More details</MoreInfoText>
+        <MoreInfoText onClick={(e) => props.handleClick(e, props.name) }>More details</MoreInfoText>
       </MoreInfo>
     </CardDiv>
   );

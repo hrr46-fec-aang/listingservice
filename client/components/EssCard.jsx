@@ -22,7 +22,6 @@ const CardTitle = styled.div`
   font-weight: 500;
   margin-bottom: 10px;
   margin-left: 4px;
-
 `;
 
 const Info = styled.div`
@@ -68,7 +67,6 @@ const MoreInfoText = styled.a`
 `;
 
 const EssCard = function(props) {
-
   return (
     <CardDiv>
       <CardTitle>{props.name}</CardTitle>
@@ -103,7 +101,7 @@ const EssCard = function(props) {
         <CardText>{props.cardInfo.pets}</CardText>
       </Info>
       <MoreInfo>
-        <MoreInfoText>More details</MoreInfoText>
+        <MoreInfoText onClick={(e) => props.handleClick(e, props.name) }>More details</MoreInfoText>
       </MoreInfo>
     </CardDiv>
   );

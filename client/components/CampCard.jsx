@@ -23,7 +23,6 @@ const CardTitle = styled.div`
   font-weight: 500;
   margin-bottom: 10px;
   margin-left: 4px;
-
 `;
 
 const Info = styled.div`
