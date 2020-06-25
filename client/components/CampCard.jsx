@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faStar} from '@fortawesome/free-regular-svg-icons';
-import {faCampground} from '@fortawesome/free-solid-svg-icons';
-import {faMap} from '@fortawesome/free-solid-svg-icons';
+import {faStar, faMap, faUser} from '@fortawesome/free-regular-svg-icons';
+import {faCampground, faParking, faWheelchair} from '@fortawesome/free-solid-svg-icons';
 
 const CardDiv = styled.div`
   margin: 0 10px 20px 10px;
@@ -80,7 +79,7 @@ const CampCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faUser}/>
             </IconInfo>
           </Icon>
         </VertIcon>
@@ -90,7 +89,7 @@ const CampCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faParking}/>
             </IconInfo>
           </Icon>
         </VertIcon>
@@ -100,7 +99,7 @@ const CampCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faWheelchair}/>
             </IconInfo>
           </Icon>
         </VertIcon>
