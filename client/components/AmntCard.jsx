@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faStar} from '@fortawesome/free-regular-svg-icons';
+import {faCampground, faFaucet, faShower, faUtensils, faWifi, faTrashAlt, faBed} from '@fortawesome/free-solid-svg-icons';
 
 const CardDiv = styled.div`
   margin: 0 10px 20px 10px;
@@ -58,7 +58,7 @@ const AmntCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faFaucet}/>
             </IconInfo>
           </Icon>
         </VertIcon>
@@ -68,7 +68,7 @@ const AmntCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faBed}/>
             </IconInfo>
           </Icon>
         </VertIcon>
@@ -78,7 +78,7 @@ const AmntCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faUtensils}/>
             </IconInfo>
           </Icon>
         </VertIcon>
@@ -88,7 +88,7 @@ const AmntCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faShower}/>
             </IconInfo>
           </Icon>
         </VertIcon>
@@ -98,7 +98,7 @@ const AmntCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faWifi}/>
             </IconInfo>
           </Icon>
         </VertIcon>
@@ -108,7 +108,7 @@ const AmntCard = function(props) {
         <VertIcon>
           <Icon>
             <IconInfo>
-              <FontAwesomeIcon icon={faStar}/>
+              <FontAwesomeIcon icon={faTrashAlt}/>
             </IconInfo>
           </Icon>
         </VertIcon>
