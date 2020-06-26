@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 
-const DesWrapper = styled.section`
-  margin-left: 25%;
-  width: 60%;
-  margin-right: 25%;
-  background: pink;
-  font-size: 1.5em;
-  width: 60%;
+const DesWrapper = styled.div`
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  box-sizing: border-box;
+  display: block;
+`;
+
+const Info = styled.div`
+  box-sizing: border-box;
+  display: block;
+  line-height: 1.42;
 `;
 
 const ReadMore = styled.a`
@@ -32,11 +36,12 @@ class Desc extends React.Component {
   render() {
     if (this.state.read) {
       return (
-        <DesWrapper key={this.props.info.site._id}>{this.state.overview.split('\n').map((para) => (
-          <p key={this.props.info.site.desc.indexOf(para)}>{para}</p>
-        ))}
+        <DesWrapper>
+          <Info key={this.props.info.site._id}>{this.state.overview.split('\n').map((para) => (
+            <p key={this.props.info.site.desc.indexOf(para)}>{para}</p>
+          ))}
+          </Info>
         </DesWrapper>
-
       );
     } else {
       return (

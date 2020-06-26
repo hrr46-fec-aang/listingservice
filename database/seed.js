@@ -21,24 +21,24 @@ const addExData = function() {
       },
       info: {
         area: {
-          lodge: faker.lorem.words(),
-          sites: faker.random.number(10),
-          guests: faker.random.number(100),
-          parking: faker.random.boolean(),
-          ada: faker.random.boolean()
+          lodge: faker.lorem.word(),
+          sites: faker.random.number(10) + ' sites',
+          guests: faker.random.number(100) + ' guests',
+          parking: faker.lorem.word(),
+          ada: faker.lorem.word(),
         },
         ess: { // essentials
-          fire: faker.lorem.words(),
-          toilet: faker.lorem.words(),
-          pets: faker.lorem.words(),
+          fire: faker.lorem.word(),
+          toilet: faker.lorem.word(),
+          pets: faker.lorem.word(),
         },
         amnt: { // amenities
-          water: faker.lorem.words(),
-          picnic: faker.lorem.words(),
-          kitchen: faker.lorem.words(),
-          shower: faker.lorem.words(),
-          wifi: faker.lorem.words(),
-          trash: faker.lorem.words()
+          water: faker.lorem.word(),
+          picnic: faker.lorem.word(),
+          kitchen: faker.lorem.word(),
+          shower: faker.lorem.word(),
+          wifi: faker.lorem.word(),
+          trash: faker.lorem.word()
         }
       },
       details: {

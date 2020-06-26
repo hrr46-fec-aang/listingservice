@@ -1,52 +1,58 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {faStar} from '@fortawesome/free-regular-svg-icons';
 
+const HostWrapper = styled.div`
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-left: 10px;
+  padding-right: 10px;
+`;
 
-// const HostStar = styled(faStar)`
-//   color: blue;
-// `;
-
-// const HostStatus = styled.i`
-//   top: 80%;
-//   left: 20%;
-//   color: gold;
-//   border-radius: 100px;
-
-// `;
+const ListedBy = styled.div`
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+  padding-right: 15px;
+  position: relative;
+  width: 66.66666667%;
+`;
 
 const Avatar = styled.img`
-  border-radius: 100px;
-  position: relative;
-  width: 50%;
-  float: left;
+  margin-right: 15px;
+  height: 90px;
+  width: 90px;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+  background-color: #ebebeb;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  vertical-align: middle;
+  line-height: 1.2;
 `;
 
 const HostInfo = styled.div`
-  margin-left: 60%;
-  margin-top: 15%;
-  margin-bottom: 25%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  font-weight: 400;
+  line-height: 1.2;
 `;
 
-const HostBy = styled.h4`
-  font-size: 1em;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
-`;
-const HostName = styled.p`
-  font-size: 1em;
-  margin-block-start: 0em;
-  margin-block-end: 0em;
+const HostBy = styled.span`
+  font-weight: 500 !important;
+  font-size: 16px;
+  line-height: 1.2;
 `;
 
-const HostWrapper = styled.section`
-  position: relative;
-  width: 15%;
-  float: left;
-  margin-left: 10%;
-  background: papayawhip;
+const HostName = styled.div`
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 1.8rem;
+  color: inherit;
+  background-color: transparent;
 `;
 
 const Host = function(props) {
@@ -60,16 +66,18 @@ const Host = function(props) {
 
   return (
     <HostWrapper>
-      <Avatar src={props.info.host.image}></Avatar>
-      {/* <span>
-        <HostStatus>
-          <FontAwesomeIcon icon={faStar}/>
-        </HostStatus>
-      </span> */}
-      <HostInfo>
-        <HostBy>Hosted by</HostBy>
-        <HostName>{props.info.host.name}</HostName>
-      </HostInfo>
+      <ListedBy>
+        <Avatar src={props.info.host.image}></Avatar>
+        {/* <span>
+          <HostStatus>
+            <FontAwesomeIcon icon={faStar}/>
+          </HostStatus>
+        </span> */}
+        <HostInfo>
+          <HostBy>Hosted by</HostBy>
+          <HostName>{props.info.host.name}</HostName>
+        </HostInfo>
+      </ListedBy>
     </HostWrapper>
   );
 };
