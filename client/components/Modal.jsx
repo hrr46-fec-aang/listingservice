@@ -5,6 +5,9 @@ import Popup from 'reactjs-popup';
 import CampCard from './CampCard.jsx';
 import EssCard from './EssCard.jsx';
 import AmntCard from './AmntCard.jsx';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faUser} from '@fortawesome/free-regular-svg-icons';
+import {faCampground, faFaucet, faShower, faUtensils, faWifi, faTrashAlt, faBed, faFire, faToiletPaper, faDog, faMapMarkerAlt, faParking, faWheelchair} from '@fortawesome/free-solid-svg-icons';
 
 const ModalDiv = styled.div`
   width: 430px;
@@ -33,24 +36,96 @@ const ModalHeader = styled.div`
   padding: 15px;
 `;
 
+const ModalButton = styled.div`
+  font-size: 1.5rem;
+  font-weight: 400;
+  opacity: 1;
+  float: none;
+  z-index: 1;
+  margin-top: -2px;
+  cursor: pointer;
+  color: #000;
+  text-shadow: 0 1px 0 #fff;
+  overflow: visible;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+`;
+
+const XButton = styled.span`
+`;
+
+const HeaderTitle = styled.h4`
+  font-weight: 500;
+  font-size: 2rem;
+  text-align: left;
+  margin-left: 0px;
+  margin-bottom: 15px;
+  margin-top: 1px;
+  line-height: 1.42;
+  display: block;
+`;
+
 const ModalBody = styled.div`
   position: relative;
   padding: 15px;
 `;
 
-const Modal = ({ handleClose, disp, children }) => {
+const ModalItem = styled.div`
+  width: 85%;
+  background-color: #fff;
+  border: 1px solid #ebebeb;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08) !important;
+`;
+
+const VertIcon = styled.div`
+`;
+
+const Icon = styled.div`
+  position: relative;
+  margin-right: 10px;
+`;
+
+const IconInfo = styled.span`
+  font-size: 3.8rem;
+  content: "\f139";
+  display: inline-block;
+  font-family: "hc-awesome";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+`;
+
+const CardText = styled.div`
+  font-size: 1.6rem;
+  font-weight 500;
+`;
+
+const Modal = ({ handleClose, disp, cardInfo, name }) => {
   const showHideClassName = disp ? 'modal display-block' : 'modal display-none';
+  console.log(name, cardInfo);
+  var arr = Object.entries(cardInfo);
 
   return (
     <div className={showHideClassName}>
       <ModalDiv>
         <ModalBox>
           <ModalHeader>
-            <button onClick={handleClose}>X</button>
+            <ModalButton onClick={handleClose}>
+              <XButton>X</XButton>
+            </ModalButton>
+            <HeaderTitle>{name}</HeaderTitle>
           </ModalHeader>
-          <ModalBody>{children}</ModalBody>
+          <ModalBody>
+            {arr.map((key) => (<ModalItem>{key} </ModalItem>))}
+          </ModalBody>
         </ModalBox>
-
       </ModalDiv>
     </div>
   );

@@ -18,14 +18,16 @@ class InfoCards extends React.Component {
     super(props);
     this.state = {
       disp: false,
-      name: undefined
+      name: undefined,
+      info: undefined
     };
   }
 
-  changeView(e, name) {
+  changeView(e, name, cardInfo) {
     this.setState({
       disp: true,
-      name: name
+      name: name,
+      info: cardInfo
     });
   }
 
@@ -39,15 +41,16 @@ class InfoCards extends React.Component {
   render() {
     var show = this.state.disp;
     var curr = this.props.info;
-    console.log(curr);
+    var cardInfo = this.state.info;
+    var name = this.state.name;
     if (show) {
-      return ( <Modal disp={show} handleClose={() => this.hideModal()}></Modal>);
+      return ( <Modal disp={show} cardInfo={cardInfo} name={name}handleClose={() => this.hideModal()}></Modal>);
     } else {
       return (
         <CardWrapper>
-          <CampCard name='Campsite area' cardInfo={curr.info.area} handleClick={(e, name) => this.changeView(e, name)}/>
-          <EssCard name='Essentials' cardInfo={curr.info.ess} handleClick={(e, name) => this.changeView(e, name)}/>
-          <AmntCard name='Amenities' cardInfo={curr.info.amnt} handleClick={(e, name) => this.changeView(e, name)}/>
+          <CampCard name='Campsite area' cardInfo={curr.info.area} handleClick={(e, name, cardInfo) => this.changeView(e, name, cardInfo)}/>
+          <EssCard name='Essentials' cardInfo={curr.info.ess} handleClick={(e, name, cardInfo) => this.changeView(e, name, cardInfo)}/>
+          <AmntCard name='Amenities' cardInfo={curr.info.amnt} handleClick={(e, name, cardInfo) => this.changeView(e, name, cardInfo)}/>
         </CardWrapper>
       );
     }

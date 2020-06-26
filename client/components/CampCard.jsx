@@ -122,7 +122,7 @@ const CampCard = function(props) {
         <CardText>{(props.cardInfo.ada) ? 'ADA access' : 'No ADA access'}</CardText>
       </Info>
       <MoreInfo>
-        <MoreInfoText onClick={(e) => props.handleClick(e, props.name) }>More details</MoreInfoText>
+        <MoreInfoText onClick={(e, name, cardInfo ) => props.handleClick(e, props.name, props.cardInfo) }>More details</MoreInfoText>
       </MoreInfo>
     </CardDiv>
   );

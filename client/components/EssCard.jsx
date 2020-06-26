@@ -101,7 +101,7 @@ const EssCard = function(props) {
         <CardText>{props.cardInfo.pets}</CardText>
       </Info>
       <MoreInfo>
-        <MoreInfoText onClick={(e) => props.handleClick(e, props.name) }>More details</MoreInfoText>
+        <MoreInfoText onClick={(e, name, cardInfo ) => props.handleClick(e, props.name, props.cardInfo) }>More details</MoreInfoText>
       </MoreInfo>
     </CardDiv>
   );

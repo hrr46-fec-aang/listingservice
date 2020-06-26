@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faCampground, faFaucet, faShower, faUtensils, faWifi, faTrashAlt, faBed} from '@fortawesome/free-solid-svg-icons';
+import {faFaucet, faShower, faUtensils, faWifi, faTrashAlt, faBed} from '@fortawesome/free-solid-svg-icons';
 
 const CardDiv = styled.div`
   margin: 0 10px 20px 10px;
@@ -131,7 +131,7 @@ const AmntCard = function(props) {
         <CardText>{props.cardInfo.trash}</CardText>
       </Info>
       <MoreInfo>
-        <MoreInfoText onClick={(e) => props.handleClick(e, props.name) }>More details</MoreInfoText>
+        <MoreInfoText onClick={(e, name, cardInfo ) => props.handleClick(e, props.name, props.cardInfo) }>More details</MoreInfoText>
       </MoreInfo>
     </CardDiv>
   );
