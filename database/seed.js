@@ -22,10 +22,10 @@ const addExData = function() {
       info: {
         area: {
           lodge: faker.lorem.word(),
-          sites: faker.random.number(10),
-          guests: faker.random.number(100),
-          parking: faker.random.boolean(),
-          ada: faker.random.boolean()
+          sites: faker.random.number(10) + ' sites',
+          guests: faker.random.number(100) + ' guests',
+          parking: faker.lorem.word(),
+          ada: faker.lorem.word(),
         },
         ess: { // essentials
           fire: faker.lorem.word(),

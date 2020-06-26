@@ -18,10 +18,10 @@ const siteSchema = new mongoose.Schema({
   info: {
     area: {
       lodge: String,
-      sites: Number,
-      guests: Number,
-      parking: Boolean,
-      ada: Boolean
+      sites: String,
+      guests: String,
+      parking: String,
+      ada: String
     },
     ess: { // essentials
       fire: String,

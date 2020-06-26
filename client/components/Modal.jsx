@@ -89,7 +89,7 @@ const Icon = styled.div`
 `;
 
 const IconInfo = styled.span`
-  font-size: 3.8rem;
+  font-size: 1.6rem;
   content: "\f139";
   display: inline-block;
   font-family: "hc-awesome";
@@ -107,10 +107,28 @@ const CardText = styled.div`
   font-weight 500;
 `;
 
+// object with all the icons
+var img = {
+  'lodge': faCampground,
+  'sites': faMapMarkerAlt,
+  'guests': faUser,
+  'parking': faParking,
+  'ada': faWheelchair,
+  'fire': faFire,
+  'toilet': faToiletPaper,
+  'pets': faDog,
+  'water': faFaucet,
+  'picnic': faBed,
+  'kitchen': faUtensils,
+  'shower': faShower,
+  'wifi': faWifi,
+  'trash': faTrashAlt
+};
+
 const Modal = ({ handleClose, disp, cardInfo, name }) => {
   const showHideClassName = disp ? 'modal display-block' : 'modal display-none';
   console.log(name, cardInfo);
-  var arr = Object.entries(cardInfo);
+  var arr = Object.keys(cardInfo);
 
   return (
     <div className={showHideClassName}>
@@ -123,7 +141,17 @@ const Modal = ({ handleClose, disp, cardInfo, name }) => {
             <HeaderTitle>{name}</HeaderTitle>
           </ModalHeader>
           <ModalBody>
-            {arr.map((key) => (<ModalItem>{key} </ModalItem>))}
+            {arr.map((item) => (
+              <ModalItem key={arr.indexOf(item)}>
+                <VertIcon>
+                  <Icon>
+                    <IconInfo>
+                      <FontAwesomeIcon icon={img[item]}/>
+                    </IconInfo>
+                  </Icon>
+                </VertIcon>
+                <CardText> {cardInfo[item]}</CardText>
+              </ModalItem>))}
           </ModalBody>
         </ModalBox>
       </ModalDiv>

@@ -89,7 +89,7 @@ const CampCard = function(props) {
             </IconInfo>
           </Icon>
         </VertIcon>
-        <CardText>{props.cardInfo.sites} Sites</CardText>
+        <CardText>{props.cardInfo.sites}</CardText>
       </Info>
       <Info>
         <VertIcon>
@@ -99,7 +99,7 @@ const CampCard = function(props) {
             </IconInfo>
           </Icon>
         </VertIcon>
-        <CardText>{props.cardInfo.guests} guests</CardText>
+        <CardText>{props.cardInfo.guests}</CardText>
       </Info>
       <Info>
         <VertIcon>
@@ -109,7 +109,7 @@ const CampCard = function(props) {
             </IconInfo>
           </Icon>
         </VertIcon>
-        <CardText>{(props.cardInfo.parking) ? 'Parking onsite' : 'No parking'}</CardText>
+        <CardText>{props.cardInfo.parking}</CardText>
       </Info>
       <Info>
         <VertIcon>
@@ -119,7 +119,7 @@ const CampCard = function(props) {
             </IconInfo>
           </Icon>
         </VertIcon>
-        <CardText>{(props.cardInfo.ada) ? 'ADA access' : 'No ADA access'}</CardText>
+        <CardText>{props.cardInfo.ada}</CardText>
       </Info>
       <MoreInfo>
         <MoreInfoText onClick={(e, name, cardInfo ) => props.handleClick(e, props.name, props.cardInfo) }>More details</MoreInfoText>
