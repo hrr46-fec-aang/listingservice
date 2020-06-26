@@ -69,13 +69,14 @@ const HeaderTitle = styled.h4`
 const ModalBody = styled.div`
   position: relative;
   padding: 15px;
+  max-height: calc(100vh - 210px);
+  overflow-y: auto;
 `;
 
 const ModalItem = styled.div`
-  width: 85%;
+  width: 100%;
   background-color: #fff;
   border: 1px solid #ebebeb;
-  padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 1px 2px rgba(0,0,0,0.08) !important;
 `;

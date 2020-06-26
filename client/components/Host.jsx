@@ -1,21 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import {faStar} from '@fortawesome/free-regular-svg-icons';
-
-
-// const HostStar = styled(faStar)`
-//   color: blue;
-// `;
-
-// const HostStatus = styled.i`
-//   top: 80%;
-//   left: 20%;
-//   color: gold;
-//   border-radius: 100px;
-
-// `;
 
 const HostWrapper = styled.div`
   float: left;
@@ -94,9 +79,6 @@ const Host = function(props) {
         </HostInfo>
       </ListedBy>
     </HostWrapper>
-
-
-
   );
 };
 

@@ -42,8 +42,6 @@ class Desc extends React.Component {
           ))}
           </Info>
         </DesWrapper>
-
-
       );
     } else {
       return (

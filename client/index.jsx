@@ -91,7 +91,6 @@ class App extends React.Component {
       return null;
     }
   }
-
 }
 
 ReactDOM.render(<App />, document.getElementById('listing'));
