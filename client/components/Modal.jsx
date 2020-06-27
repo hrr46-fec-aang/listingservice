@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import styled from 'styled-components';
-import Popup from 'reactjs-popup';
 import CampCard from './CampCard.jsx';
 import EssCard from './EssCard.jsx';
 import AmntCard from './AmntCard.jsx';
