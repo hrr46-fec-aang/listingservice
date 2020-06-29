@@ -24,6 +24,10 @@ const ListingDiv = styled.div`
   background-color: white;
 `;
 
+const Header = styled.div`
+  height: 170px;
+`;
+
 const Container = styled.section`
   margin: 0;
   padding-top: 20px;
@@ -75,6 +79,11 @@ class ListingApp extends React.Component {
     if (state.state.mounted) {
       return (
         <ListingDiv>
+          <Header>
+
+            <h1>{state.state.site.site.prop}</h1>
+
+          </Header>
           <Container>
             <Overview>
               <Host info={state.state.site}/>
