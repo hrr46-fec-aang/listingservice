@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import styled from 'styled-components';
 
+import Header from './components/Header.jsx';
 import Desc from './components/Desc.jsx';
 import InfoCards from './components/InfoCards.jsx';
 import ContactHost from './components/ContactHost.jsx';
@@ -24,8 +25,10 @@ const ListingDiv = styled.div`
   background-color: white;
 `;
 
-const Header = styled.div`
-  height: 170px;
+const HeaderDiv = styled.div`
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 1.8rem;
 `;
 
 const Container = styled.section`
@@ -79,11 +82,9 @@ class ListingApp extends React.Component {
     if (state.state.mounted) {
       return (
         <ListingDiv>
-          <Header>
-
-            <h1>{state.state.site.site.prop}</h1>
-
-          </Header>
+          <HeaderDiv>
+            <Header info={state.state.site.site}/>
+          </HeaderDiv>
           <Container>
             <Overview>
               <Host info={state.state.site}/>
