@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import styled from 'styled-components';
 
+import Header from './components/Header.jsx';
 import Desc from './components/Desc.jsx';
 import InfoCards from './components/InfoCards.jsx';
 import ContactHost from './components/ContactHost.jsx';
@@ -22,6 +23,12 @@ const ListingDiv = styled.div`
   line-height: 1.42;
   color: #333333;
   background-color: white;
+`;
+
+const HeaderDiv = styled.div`
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 1.8rem;
 `;
 
 const Container = styled.section`
@@ -47,7 +54,7 @@ const Cards = styled.div`
   location: center;
 `;
 
-class App extends React.Component {
+class ListingApp extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -75,6 +82,9 @@ class App extends React.Component {
     if (state.state.mounted) {
       return (
         <ListingDiv>
+          <HeaderDiv>
+            <Header info={state.state.site.site}/>
+          </HeaderDiv>
           <Container>
             <Overview>
               <Host info={state.state.site}/>
@@ -93,4 +103,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('listing'));
+ReactDOM.render(<ListingApp />, document.getElementById('listing'));

@@ -127,7 +127,6 @@ var img = {
 
 const Modal = ({ handleClose, disp, cardInfo, name }) => {
   const showHideClassName = disp ? 'modal display-block' : 'modal display-none';
-  console.log(name, cardInfo);
   var arr = Object.keys(cardInfo);
 
   return (
