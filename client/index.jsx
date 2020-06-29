@@ -47,7 +47,7 @@ const Cards = styled.div`
   location: center;
 `;
 
-class App extends React.Component {
+class ListingApp extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -93,4 +93,4 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('listing'));
+ReactDOM.render(<ListingApp />, document.getElementById('listing'));
