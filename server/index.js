@@ -3,6 +3,8 @@ const path = require('path');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const app = express();
+const cors = require('cors');
+app.use(cors());
 
 const Sites = require('../database/Site.js');
 
