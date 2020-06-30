@@ -9,6 +9,7 @@ app.use(cors());
 const Sites = require('../database/Site.js');
 
 app.use(bodyParser.json());
+app.use(express.static(__dirname + '/../client/dist'));
 app.use('/:id', express.static(path.join(__dirname, '/../client/dist')));
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
