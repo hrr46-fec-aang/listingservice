@@ -130,31 +130,33 @@ const Modal = ({ handleClose, disp, cardInfo, name }) => {
   var arr = Object.keys(cardInfo);
 
   return (
-    <div className={showHideClassName}>
-      <ModalDiv>
-        <ModalBox>
-          <ModalHeader>
-            <ModalButton onClick={handleClose}>
-              <XButton>X</XButton>
-            </ModalButton>
-            <HeaderTitle>{name}</HeaderTitle>
-          </ModalHeader>
-          <ModalBody>
-            {arr.map((item) => (
-              <ModalItem key={arr.indexOf(item)}>
-                <VertIcon>
-                  <Icon>
-                    <IconInfo>
-                      <FontAwesomeIcon icon={img[item]}/>
-                    </IconInfo>
-                  </Icon>
-                </VertIcon>
-                <CardText> {cardInfo[item]}</CardText>
-              </ModalItem>))}
-          </ModalBody>
-        </ModalBox>
-      </ModalDiv>
-    </div>
+    ReactDOM.createPortal(
+      <div className={showHideClassName}>
+        <ModalDiv>
+          <ModalBox>
+            <ModalHeader>
+              <ModalButton onClick={handleClose}>
+                <XButton>X</XButton>
+              </ModalButton>
+              <HeaderTitle>{name}</HeaderTitle>
+            </ModalHeader>
+            <ModalBody>
+              {arr.map((item) => (
+                <ModalItem key={arr.indexOf(item)}>
+                  <VertIcon>
+                    <Icon>
+                      <IconInfo>
+                        <FontAwesomeIcon icon={img[item]}/>
+                      </IconInfo>
+                    </Icon>
+                  </VertIcon>
+                  <CardText> {cardInfo[item]}</CardText>
+                </ModalItem>))}
+            </ModalBody>
+          </ModalBox>
+        </ModalDiv>
+      </div>,
+      document.body)
   );
 };
 
