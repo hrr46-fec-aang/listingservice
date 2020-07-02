@@ -6,6 +6,7 @@
   "scripts": {
     "start": "nodemon server/start.js",
     "build": "webpack -d --watch",
+    "buildStatic": "webpack -d",
     "buildCI": "webpack -d",
     "test": "jest --detectOpenHandles",
     "testBE": "jest ./test/BE.test.js",
