@@ -16,7 +16,7 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/site/:id', function(req, res) {
+app.get('http://localhost:3002/site/:id', function(req, res) {
   console.log('site id: ', req.params);
 
   var siteID = req.params.id;
