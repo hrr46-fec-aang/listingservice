@@ -107,7 +107,6 @@ const CardText = styled.div`
   font-weight 500;
 `;
 
-// object with all the icons
 var img = {
   'lodge': faCampground,
   'sites': faMapMarkerAlt,

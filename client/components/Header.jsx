@@ -24,7 +24,6 @@ const ActionRight = styled.div`
   display: flex;
   margin-top: 20px;
   width: 50%;
-
 `;
 
 const Thumb = styled.div`
