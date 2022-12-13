@@ -38,7 +38,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "cors": "^2.8.5",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "faker": "^4.1.0",
     "font-awesome": "^4.7.0",
     "jest": "^26.0.1",
